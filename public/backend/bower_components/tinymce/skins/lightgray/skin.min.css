@@ -1,0 +1,839 @@
+[
+    {
+        "dir": "grunt.html.injection",
+        "name": [
+            "grunt",
+            "html",
+            "injection"
+        ],
+        "pkg": {
+            "name": "bs-recipes-grunt-html-injection",
+            "version": "1.0.0",
+            "description": "Grunt, SASS, HTML/CSS injection example",
+            "main": "Gruntfile.js",
+            "scripts": {
+                "start": "grunt"
+            },
+            "license": "MIT",
+            "devDependencies": {
+                "bs-html-injector": "3.0.1",
+                "grunt": "^0.4.5",
+                "grunt-browser-sync": "^2.0.0",
+                "grunt-contrib-sass": "^0.9.2",
+                "grunt-contrib-watch": "^0.6.1"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/grunt.html.injection",
+        "title": "Grunt Html Injection"
+    },
+    {
+        "dir": "grunt.sass",
+        "name": [
+            "grunt",
+            "sass"
+        ],
+        "pkg": {
+            "name": "grunt.sass",
+            "version": "1.0.0",
+            "description": "Grunt & SASS",
+            "main": "Gruntfile.js",
+            "scripts": {
+                "start": "grunt"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "grunt": "^0.4.5",
+                "grunt-browser-sync": "^2.0.0",
+                "grunt-contrib-sass": "^0.9.2",
+                "grunt-contrib-watch": "^0.6.1"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/grunt.sass",
+        "title": "Grunt Sass"
+    },
+    {
+        "dir": "grunt.sass.autoprefixer",
+        "name": [
+            "grunt",
+            "sass",
+            "autoprefixer"
+        ],
+        "pkg": {
+            "name": "grunt.sass.autoprefixer",
+            "version": "1.0.0",
+            "description": "Grunt, SASS & Autoprefixer",
+            "main": "Gruntfile.js",
+            "scripts": {
+                "start": "grunt"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "grunt": "^0.4.5",
+                "grunt-autoprefixer": "^2.2.0",
+                "grunt-browser-sync": "^2.1.1",
+                "grunt-contrib-sass": "^0.9.2",
+                "grunt-contrib-watch": "^0.6.1"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/grunt.sass.autoprefixer",
+        "title": "Grunt Sass Autoprefixer"
+    },
+    {
+        "dir": "gulp.browserify",
+        "name": [
+            "gulp",
+            "browserify"
+        ],
+        "pkg": {
+            "name": "gulp.browserify",
+            "version": "1.0.0",
+            "description": "Browserify, Babelify + Watchify + Sourcemaps Example",
+            "main": "gulpfile.js",
+            "scripts": {
+                "start": "gulp"
+            },
+            "license": "MIT",
+            "devDependencies": {
+                "exorcist": "^0.4.0",
+                "babelify": "^6.1.2",
+                "browser-sync": "^2.2.1",
+                "browserify": "^8.1.3",
+                "gulp": "^3.8.11",
+                "gulp-util": "^3.0.3",
+                "vinyl-source-stream": "^1.0.0",
+                "watchify": "^2.3.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/gulp.browserify",
+        "title": "Gulp Browserify"
+    },
+    {
+        "dir": "gulp.pug",
+        "name": [
+            "gulp",
+            "pug"
+        ],
+        "pkg": {
+            "name": "gulp.pug",
+            "version": "1.0.0",
+            "description": "Gulp, SASS + Pug Templates",
+            "main": "gulpfile.js",
+            "scripts": {
+                "start": "gulp"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "browser-sync": "^2.17.5",
+                "gulp": "^3.9.1",
+                "gulp-pug": "^3.1.0",
+                "gulp-sass": "^2.3.2"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/gulp.pug",
+        "title": "Gulp Pug"
+    },
+    {
+        "dir": "gulp.ruby.sass",
+        "name": [
+            "gulp",
+            "ruby",
+            "sass"
+        ],
+        "pkg": {
+            "name": "gulp.ruby.sass",
+            "version": "1.0.0",
+            "description": "Gulp & Ruby SASS",
+            "main": "gulpfile.js",
+            "scripts": {
+                "start": "gulp"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "browser-sync": "^2.2.0",
+                "gulp": "^3.8.11",
+                "gulp-filter": "^2.0.2",
+                "gulp-ruby-sass": "^1.0.1",
+                "gulp-sass": "^1.3.3",
+                "gulp-sourcemaps": "^1.5.1"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/gulp.ruby.sass",
+        "title": "Gulp Ruby Sass"
+    },
+    {
+        "dir": "gulp.sass",
+        "name": [
+            "gulp",
+            "sass"
+        ],
+        "pkg": {
+            "name": "gulp.sass",
+            "version": "1.0.0",
+            "description": "Gulp & SASS",
+            "main": "gulpfile.js",
+            "scripts": {
+                "start": "gulp"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "browser-sync": "^2.2.0",
+                "gulp": "^3.8.11",
+                "gulp-sass": "^2.2.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/gulp.sass",
+        "title": "Gulp Sass"
+    },
+    {
+        "dir": "gulp.swig",
+        "name": [
+            "gulp",
+            "swig"
+        ],
+        "pkg": {
+            "name": "gulp.swig",
+            "version": "1.0.0",
+            "description": "Gulp & Swig Templates",
+            "main": "gulpfile.js",
+            "scripts": {
+                "start": "gulp"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "browser-sync": "^2.2.0",
+                "gulp": "^3.8.11",
+                "gulp-sass": "^1.3.3",
+                "gulp-swig": "^0.7.4"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/gulp.swig",
+        "title": "Gulp Swig"
+    },
+    {
+        "dir": "gulp.task.sequence",
+        "name": [
+            "gulp",
+            "task",
+            "sequence"
+        ],
+        "pkg": {
+            "name": "gulp.sass",
+            "version": "1.0.0",
+            "description": "Gulp, SASS + Slow running tasks",
+            "main": "gulpfile.js",
+            "scripts": {
+                "start": "gulp"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+                "browser-sync": "^2.2.0",
+                "gulp": "^3.8.11",
+                "gulp-sass": "^1.3.3",
+                "through2": "^0.6.3"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/gulp.task.sequence",
+        "title": "Gulp Task Sequence"
+    },
+    {
+        "dir": "html.injection",
+        "name": [
+            "html",
+            "injection"
+        ],
+        "pkg": {
+            "name": "bs-recipes-html-injection",
+            "version": "1.0.0",
+            "description": "HTML/CSS injection example",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "devDependencies": {
+                "bs-html-injector": "^2.0.3",
+                "browser-sync": "^2.1.6"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/html.injection",
+        "title": "Html Injection"
+    },
+    {
+        "dir": "middleware.css.injection",
+        "name": [
+            "middleware",
+            "css",
+            "injection"
+        ],
+        "pkg": {
+            "name": "bs-recipes-server",
+            "version": "1.0.0",
+            "description": "Middleware + CSS example",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "dependencies": {
+                "browser-sync": "^2.1.6",
+                "less": "^2.4.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/middleware.css.injection",
+        "title": "Middleware Css Injection"
+    },
+    {
+        "dir": "proxy.custom-css",
+        "name": [
+            "proxy",
+            "custom-css"
+        ],
+        "pkg": {
+            "name": "bs-recipes-server",
+            "version": "1.0.0",
+            "description": "Proxy example + injecting custom css file",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "dependencies": {
+                "browser-sync": "^2.11.2"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/proxy.custom-css",
+        "title": "Proxy Custom-css"
+    },
+    {
+        "dir": "server",
+        "name": [
+            "server"
+        ],
+        "pkg": {
+            "name": "bs-recipes-server",
+            "version": "1.0.0",
+            "description": "Server example",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "dependencies": {
+                "browser-sync": "^2.1.6"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/server",
+        "title": "Server"
+    },
+    {
+        "dir": "server.gzipped.assets",
+        "name": [
+            "server",
+            "gzipped",
+            "assets"
+        ],
+        "pkg": {
+            "name": "bs-recipes-server-with-gzipped-assets",
+            "version": "1.0.0",
+            "description": "Server with pre-gzipped assets example",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "dependencies": {
+                "browser-sync": "^2.4.0",
+                "connect-gzip-static": "^1.0.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/server.gzipped.assets",
+        "title": "Server Gzipped Assets"
+    },
+    {
+        "dir": "server.includes",
+        "name": [
+            "server",
+            "includes"
+        ],
+        "pkg": {
+            "name": "bs-recipes-server-includes",
+            "version": "1.0.0",
+            "description": "Server includes example",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "dependencies": {
+                "browser-sync": "^2.1.6"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/server.includes",
+        "title": "Server Includes"
+    },
+    {
+        "dir": "server.middleware",
+        "name": [
+            "server",
+            "middleware"
+        ],
+        "pkg": {
+            "name": "bs-recipes-server",
+            "version": "1.0.0",
+            "description": "Server + Logging + History API fallback middlewares Example",
+            "main": "app.js",
+            "scripts": {
+                "start": "node app.js"
+            },
+            "license": "MIT",
+            "dependencies": {
+                "browser-sync": "^2.1.6",
+                "connect-logger": "0.0.1",
+                "connect-history-api-fallback": "^1.1.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/server.middleware",
+        "title": "Server Middleware"
+    },
+    {
+        "dir": "webpack.babel",
+        "name": [
+            "webpack",
+            "babel"
+        ],
+        "pkg": {
+            "name": "webpack.babel",
+            "version": "1.0.0",
+            "description": "Webpack + Babel",
+            "main": "app.js",
+            "author": "Shane Osbourne",
+            "license": "MIT",
+            "scripts": {
+                "start": "node app"
+            },
+            "dependencies": {},
+            "devDependencies": {
+                "babel-core": "^6.1.2",
+                "babel-loader": "^6.1.0",
+                "babel-plugin-transform-runtime": "^6.1.2",
+                "babel-preset-es2015": "^6.1.2",
+                "babel-preset-stage-0": "^6.1.2",
+                "browser-sync": "^2.8.0",
+                "bs-fullscreen-message": "^1.0.0",
+                "strip-ansi": "^3.0.0",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.babel",
+        "title": "Webpack Babel"
+    },
+    {
+        "dir": "webpack.monkey-hot-loader",
+        "name": [
+            "webpack",
+            "monkey-hot-loader"
+        ],
+        "pkg": {
+            "name": "webpack.monkey-hot-loader",
+            "version": "1.0.0",
+            "description": "Webpack + Monkey Hot Loader",
+            "main": "app.js",
+            "author": "Sergey Slipchenko <faergeek@gmail.com>",
+            "license": "MIT",
+            "scripts": {
+                "start": "node ."
+            },
+            "dependencies": {
+                "browser-sync": "^2.8.0",
+                "monkey-hot-loader": "0.0.3",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0",
+                "webpack-hot-middleware": "^1.1.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.monkey-hot-loader",
+        "title": "Webpack Monkey-hot-loader"
+    },
+    {
+        "dir": "webpack.preact-hot-loader",
+        "name": [
+            "webpack",
+            "preact-hot-loader"
+        ],
+        "pkg": {
+            "name": "webpack.preact-hot-loader",
+            "version": "1.0.0",
+            "description": "Webpack + Preact Hot Loader",
+            "main": "app.js",
+            "author": "Shane Osbourne",
+            "license": "MIT",
+            "scripts": {
+                "start": "node .",
+                "build": "webpack"
+            },
+            "dependencies": {
+                "babel": "^6.5.2",
+                "babel-core": "^6.14.0",
+                "babel-eslint": "^7.0.0",
+                "babel-loader": "^6.2.5",
+                "babel-plugin-transform-decorators-legacy": "^1.3.4",
+                "babel-plugin-transform-react-jsx": "^6.8.0",
+                "babel-preset-es2015": "^6.14.0",
+                "babel-register": "^6.14.0",
+                "babel-runtime": "^6.11.6",
+                "browser-sync": "^2.8.0",
+                "compression-webpack-plugin": "^0.3.2",
+                "preact": "^6.4.0",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0",
+                "webpack-hot-middleware": "^1.1.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.preact-hot-loader",
+        "title": "Webpack Preact-hot-loader"
+    },
+    {
+        "dir": "webpack.react-hot-loader",
+        "name": [
+            "webpack",
+            "react-hot-loader"
+        ],
+        "pkg": {
+            "name": "webpack.react-hot-loader",
+            "version": "1.0.0",
+            "description": "Webpack + React Hot Loader",
+            "main": "app.js",
+            "author": "Sergey Slipchenko <faergeek@gmail.com>",
+            "license": "MIT",
+            "scripts": {
+                "start": "node ."
+            },
+            "dependencies": {
+                "babel-core": "^6.21.0",
+                "babel-loader": "^6.2.10",
+                "babel-preset-es2015": "^6.9.0",
+                "babel-preset-react": "^6.16.0",
+                "browser-sync": "^2.8.0",
+                "react": "^15.4.1",
+                "react-dom": "^15.4.1",
+                "react-hot-loader": "^1.2.8",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0",
+                "webpack-hot-middleware": "^2.13.2"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.react-hot-loader",
+        "title": "Webpack React-hot-loader"
+    },
+    {
+        "dir": "webpack.react-transform-hmr",
+        "name": [
+            "webpack",
+            "react-transform-hmr"
+        ],
+        "pkg": {
+            "name": "webpack.react-transform-hmr",
+            "version": "1.0.0",
+            "description": "Webpack + React Transform HMR",
+            "main": "app.js",
+            "author": "Sergey Slipchenko <faergeek@gmail.com>",
+            "license": "MIT",
+            "scripts": {
+                "start": "node ."
+            },
+            "dependencies": {
+                "babel-core": "^6.21.0",
+                "babel-loader": "^6.2.10",
+                "babel-plugin-react-transform": "^2.0.2",
+                "babel-preset-es2015": "^6.9.0",
+                "babel-preset-react": "^6.16.0",
+                "browser-sync": "^2.8.0",
+                "react": "^15.4.1",
+                "react-dom": "^15.4.1",
+                "react-transform-hmr": "^1.0.0",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0",
+                "webpack-hot-middleware": "^2.13.2"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.react-transform-hmr",
+        "title": "Webpack React-transform-hmr"
+    },
+    {
+        "dir": "webpack.typescript",
+        "name": [
+            "webpack",
+            "typescript"
+        ],
+        "pkg": {
+            "name": "webpack.typescript",
+            "version": "1.0.0",
+            "description": "Webpack + TypeScript",
+            "main": "app.js",
+            "author": "Shane Osbourne and John Lindquist",
+            "license": "MIT",
+            "scripts": {
+                "start": "node app"
+            },
+            "dependencies": {},
+            "devDependencies": {
+                "ts-loader": "^0.8.1",
+                "typescript": "^1.7.5",
+                "browser-sync": "^2.8.0",
+                "bs-fullscreen-message": "^1.0.0",
+                "strip-ansi": "^3.0.0",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.typescript",
+        "title": "Webpack Typescript"
+    },
+    {
+        "dir": "webpack.typescript.react",
+        "name": [
+            "webpack",
+            "typescript",
+            "react"
+        ],
+        "pkg": {
+            "name": "webpack.typescript.react",
+            "version": "1.0.0",
+            "description": "Webpack, TypeScript + React",
+            "main": "app.js",
+            "author": "Shane Osbourne",
+            "license": "MIT",
+            "scripts": {
+                "start": "node app",
+                "build": "webpack",
+                "preview": "npm run build && node preview"
+            },
+            "dependencies": {},
+            "devDependencies": {
+                "browser-sync": "^2.8.0",
+                "bs-fullscreen-message": "^1.0.0",
+                "compression": "1.6.1",
+                "react": "0.14.7",
+                "react-dom": "0.14.7",
+                "react-lite": "0.15.3",
+                "strip-ansi": "^3.0.0",
+                "ts-loader": "^0.8.1",
+                "typescript": "^1.7.5",
+                "typings": "0.7.9",
+                "webpack": "^1.10.5",
+                "webpack-dev-middleware": "^1.2.0"
+            }
+        },
+        "link": "https://github.com/Browsersync/recipes/tree/master/recipes/webpack.typescript.react",
+        "title": "Webpack Typescript React"
+    }
+]                                                                                                                                                                                                                              {
+  "_args": [
+    [
+      {
+        "raw": "bs-recipes@1.3.4",
+        "scope": null,
+        "escapedName": "bs-recipes",
+        "name": "bs-recipes",
+        "rawSpec": "1.3.4",
+        "spec": "1.3.4",
+        "type": "version"
+      },
+      "C:\\xampp\\htdocs\\travel\\node_modules\\browser-sync"
+    ]
+  ],
+  "_from": "bs-recipes@1.3.4",
+  "_id": "bs-recipes@1.3.4",
+  "_inCache": true,
+  "_location": "/bs-recipes",
+  "_nodeVersion": "6.8.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/bs-recipes-1.3.4.tgz_1483691988195_0.5061966790817678"
+  },
+  "_npmUser": {
+    "name": "shakyshane",
+    "email": "shakyshane@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "bs-recipes@1.3.4",
+    "scope": null,
+    "escapedName": "bs-recipes",
+    "name": "bs-recipes",
+    "rawSpec": "1.3.4",
+    "spec": "1.3.4",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/browser-sync"
+  ],
+  "_resolved": "https://registry.npmjs.org/bs-recipes/-/bs-recipes-1.3.4.tgz",
+  "_shasum": "0d2d4d48a718c8c044769fdc4f89592dc8b69585",
+  "_shrinkwrap": null,
+  "_spec": "bs-recipes@1.3.4",
+  "_where": "C:\\xampp\\htdocs\\travel\\node_modules\\browser-sync",
+  "author": {
+    "name": "Shane Osbourne"
+  },
+  "bugs": {
+    "url": "https://github.com/browsersync/recipes/issues"
+  },
+  "dependencies": {},
+  "description": "Fully working project examples showing how to use BrowserSync in various ways",
+  "devDependencies": {
+    "crossbow": "^0.4.5",
+    "node-dir": "^0.1.6"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0d2d4d48a718c8c044769fdc4f89592dc8b69585",
+    "tarball": "https://registry.npmjs.org/bs-recipes/-/bs-recipes-1.3.4.tgz"
+  },
+  "files": [
+    "recipes",
+    "index.js",
+    "manifest.json"
+  ],
+  "gitHead": "cd5056d3c6cf3cec71cec78f79fff9f48b80931e",
+  "homepage": "http://www.browsersync.io/docs/recipes/",
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "shakyshane",
+      "email": "shakyshane@gmail.com"
+    }
+  ],
+  "name": "bs-recipes",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/browsersync/recipes.git"
+  },
+  "scripts": {
+    "build": "node crossbow.js",
+    "clean:nm": "find ./recipes -name node_modules | xargs rm -rf",
+    "clean:other": "find . -name .sass-cache | xargs rm -rf && find . -name .idea | xargs rm -rf",
+    "prepublish": "npm run clean:nm && npm run clean:other",
+    "test": "npm run-script build"
+  },
+  "version": "1.3.4"
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Œ®!√u,3q®?kàfeºˇ0eøïØ®¡o£∂"ä@Î&rüøÅp≈›ÖMBπ·…º≈3òÏC¢{∂ö=pQπÃa`J<'”ìvØÎ∑ZÅ–DπÆêÙ5ƒ9ô∑£ü“„ONvt]·6Ñ‰Ï90aé‹oEπÑ°¯˚ÿs_^ =#€}prW≥`5Q‰ Íı’g(L\ˇ,u÷¬#Ω›E$wDÕ¸µwåjÿ]»m‚’3W'bÁÔxÓ[¥l6ö∫e™ZHÇh¥xyæ_Pá"m⁄ıÙ»ã(£8lÄ4^ﬁíÃî√ˇíâpÅÆ∂^È™eìÌ¯AcYwqgL/≥ãdÉü.y—gZ:ıÕÊ9∞∂æuÜØëºqw>-Jny’ÅSèFi$¸bªî˚¸¶Ã˝ÓπñÆÆßªº&Ds^l$ßÆú¨{ë5÷‡ö”-≥òW‚ûêÁ@≠EE.ÀMˆ´;N0vS   ‘Aõb+ˇ  O§’ ñÂ¿ãs9Ÿ‰Z≤Ÿfƒ∞ø‰Ç`Åò¨∑øÆô,≈ˇ0&oÅ¿o£YXNŸ ñì%w©π&9∏Ü”‡-‡·ó$‰èÇﬁ´°#˙¡ì|√3øpôœs<∞W<G!?˙*ßŸQõ∂#Êp‡ç„÷í	˛!"`·ﬁ\ÌÀó‰ÆÙªÄ«p6M∂ﬂ ˇJ6ÖMYö´¶õËæ9 bUñ Rñ»b’ÀúŸáß’hèC7ıµ©º—æ=w\m9π Ê~Ñ H€!&   ‚AõÇ+ˇ  coØ Awi9u<!DkXé§S°J˚≈B5 ˜i!h"ˇbSß1r(áæB’´∆”/ÉÍÆ™ÁÉ:Ëˆ0!ÚÌ¡kx∑6òYçæÁ‚âË6ÆUI˛@9≠K∑Œ∑8«á0}FäÃüZò¬πÛµ@Ìß’ÅYD6„µËˆaæ@{˜BX:_Ñö4N∞©âZ^ã„¯¿ÃÒπèIÁéNº¨@`∏6ó˙yªCŒóø	≤ƒ√tùa¬ÄIXüÈﬂ9rBí>a⁄XH˝uVÈn”*}áë  $SAõ¢+ˇ  1≠‰ï¸Àu¬ö·jJı≥‹[h[4ô‘∂Kãõw≤∫#˛ &ƒëjw“b–-V—‰ﬂÑ N?∞SÀ˜PPa∏Jœìë†jµ≤+7’ùˇ‡vkÈâ‡öÅäs2N˙_.¥ËƒÇÁao¡k€ôæ3F¡(û	í«l~∞ñ^UIƒ@Gå)ÛàÛß'ŸK˛äøËUäÄ˜ö€77M%≥¶\:A3∂ÏZ‡7 töâr˜âD¡¬s:ı÷H]trè¥Gÿïßá0'o*[¶˛7–## Browsersync recipes.
+
+There are endless amounts of possible integrations and workflow scenarios when using Browsersync, so this project is an 
+attempt to highlight as many of them as we can, whilst providing full, working examples.
+
+Here's what we have currently...
+
+- [Grunt, SASS, HTML/CSS injection example](https://github.com/Browsersync/recipes/tree/master/recipes/grunt.html.injection)
+- [Grunt &amp; SASS](https://github.com/Browsersync/recipes/tree/master/recipes/grunt.sass)
+- [Grunt, SASS &amp; Autoprefixer](https://github.com/Browsersync/recipes/tree/master/recipes/grunt.sass.autoprefixer)
+- [Browserify, Babelify + Watchify + Sourcemaps Example](https://github.com/Browsersync/recipes/tree/master/recipes/gulp.browserify)
+- [Gulp, SASS + Pug Templates](https://github.com/Browsersync/recipes/tree/master/recipes/gulp.pug)
+- [Gulp &amp; Ruby SASS](https://github.com/Browsersync/recipes/tree/master/recipes/gulp.ruby.sass)
+- [Gulp &amp; SASS](https://github.com/Browsersync/recipes/tree/master/recipes/gulp.sass)
+- [Gulp &amp; Swig Templates](https://github.com/Browsersync/recipes/tree/master/recipes/gulp.swig)
+- [Gulp, SASS + Slow running tasks](https://github.com/Browsersync/recipes/tree/master/recipes/gulp.task.sequence)
+- [HTML/CSS injection example](https://github.com/Browsersync/recipes/tree/master/recipes/html.injection)
+- [Middleware + CSS example](https://github.com/Browsersync/recipes/tree/master/recipes/middleware.css.injection)
+- [Proxy example + injecting custom css file](https://github.com/Browsersync/recipes/tree/master/recipes/proxy.custom-css)
+- [Server example](https://github.com/Browsersync/recipes/tree/master/recipes/server)
+- [Server with pre-gzipped assets example](https://github.com/Browsersync/recipes/tree/master/recipes/server.gzipped.assets)
+- [Server includes example](https://github.com/Browsersync/recipes/tree/master/recipes/server.includes)
+- [Server + Logging + History API fallback middlewares Example](https://github.com/Browsersync/recipes/tree/master/recipes/server.middleware)
+- [Webpack + Babel](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.babel)
+- [Webpack + Monkey Hot Loader](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.monkey-hot-loader)
+- [Webpack + Preact Hot Loader](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.preact-hot-loader)
+- [Webpack + React Hot Loader](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.react-hot-loader)
+- [Webpack + React Transform HMR](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.react-transform-hmr)
+- [Webpack + TypeScript](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.typescript)
+- [Webpack, TypeScript + React](https://github.com/Browsersync/recipes/tree/master/recipes/webpack.typescript.react)
+
+... each one is a full, working example - just have a look at the `readme.md` in each one for installation
+instructions.
+
+
+### Contributions / Feedback
+
+Spotted an error? Couldn't get one of the examples running? Have your own sweet setup that you want to show off to the world?
+We'd love to receive your feedback and contributions - so please get in touch! We aim to make this project the canonical source 
+of example projects & code snippets related to running Browsersync.
+
+### How to contribute an example
+
+First thing you should do, is take a look at our [simplest example here](https://github.com/Browsersync/recipes/tree/master/recipes/server) - 
+this will give you a great head-start on setting up your code.
+
+Then, `fork` this repo and `clone` your fork down to your local machine. Now create a new folder inside `recipes`
+(note the naming structure). This is where you create your awesome example. You're free to do as you like,
+but there are a couple of rules you'll need to follow to ensure the project can build.
+
+**Required Files**
+
+- `package.json` (see below for requirements)
+- `app.js` (or any JS file showing the example)
+- `./app` directory. Always include the minimum HTML, JS & CSS needed to prove your example.
+
+**Do NOT include**
+- `readme.md` (this is created dynamically for you)
+- any other files that are not related to your example.
+
+
+### package.json requirements
+
+
+**start command**: For consistency, ensure your example can be run with the command `npm start`. To 
+do this, you just need to provide something along these lines:
+
+```json
+"scripts": {
+    "start": "node app.js"
+},
+```
+
+**main file**: We inline your main Javascript file into the `readme.md`, so
+don't miss this field.
+
+```json
+"main": "app.js" // or gulpfile.js etc
+```
+
+**description**: We use this as the Title. So make it short and descriptive, such as 
+
+```json
+"description": "Server example"
+```
+
+### Finally, build.
+After you've added your example in the recipes folder, return to the root and run
+
+```bash
+npm install && npm run build
+```
+
+This will install [Crossbow.js](https://github.com/shakyShane/crossbow.js) and compile the project.
+Commit everything that has changed and push it up to your fork. Send a Pull Request when you're
+ready, or if you'd like us to have a look over your code before that, just ping us [twitter](https://twitter.com/browsersync) and we'll 
+take a look!                                                                                                                                                                                                                                                                                                                                                                                                                       3úπC â∆ÊQ2Dí¸Ó¡GQΩ9
+º4ÌCä^,BºR˙∆*Ò&i∫j6†ú(7søı∏Jq\ËÍ/~ûﬂ¿ıb´!~Å…˝fµ@
+∞∫1C®iÆ¥£ kã=;NÄ˚aÖ˛ò⁄%´|˝P £TÉFbò¨9’9˙a6ñ‚ƒ680'‡í£º√˝úÜ@¥/ä÷,·_ã§+§´Ôd|ô`ŒT‚|ìïË‘‹
+Õà—£‚R95{§∂s>«|∏¸:X±N∫I©r´‘èÜ´DÍÕEzBÊ Ò‘$Ñ¢ﬂ◊êcÑãºK8().`¯oDÕ∑†w{ﬁ_ZöÕÓøiÆ’ßrÑ1~ÓöDd÷kÈ’π»iB¬jÁC"‘|L
+ﬁı∞±î‹êê¸¿<Éÿ÷?ÍñiweìLu`⁄ËW“’[*Û¿®-Ã}ˆÿüƒìË∫Ÿkó0Œ5¢q’PúÄ¶≥ÿ_úNz3.2ºmIˇ}Pc[«¡n∫Ôâ2‰Â¸CÄVº}Ç¨bœ∂7Le∑p¡j†ÄXπ√·KaæöÜ:‚
+H€Ò÷Ï]=êÁ∆ûñàZ,7Ç!á!,Ω˜π~˘ÌÊUrÓÿ4 )∏´ŒàÄeÕq:È<ã}±‰9Døjœár±tñÅËôÏI‰û{Ãô‰`ˆÔ¬ £n¬R5¸7áG‡áäq‡÷[q ˘~w‡&Ç‹ è’≥ÁÙùãÑfZ} ñ 4 Íw‘âl(LIØÜÜ©DcõÁÖ©Ü¬ˆÿ$mC©|ë†~√- óƒ+á+SvshL√∏wí,ÊSÓÊ‹5“’¿VRè9Ñ!P∞**ní  EãÆ;´O¬Ze—∂k0‰_–ΩJÓ{•L¯¨qO\^ 6Èj∂ìyPU¯ΩÁ–+∆å˛VÑ∫}”Éq÷€ûy∂—Åñ¬üa∂y%ˆÓp∫ÚÚ†?i—ΩËè’K> ]ì)ª∫0∫π<Iç√a!·‹ı<ˆ)'RŒ¨Æeå™öæ∞•Ÿ!7°HÆR°H0#Îäî˙c}]~ó ME^÷ìÑ=çP„am∞äÕI£ò
+LÖÁ∏öäù¿f+¸}œGq0GºÃ¨¢_ÉuæyYä‘Ñ€™Ñg+˙iˇ}&ª«W¿‰,¶Ÿùé∫ÿ—‰@ı∑w>˚ß¥“Ã˜„"Qé∑°ò∞´1Ù€ caéÇ¶¸âÙQ(ì/C·@≈&3âª~∫HÏi;m	ŒWg~\–)	ñQub¨ò<hU∫ƒ =≤0«¥ë<œÍ6¶ˇïK°ºÔq◊›¢∫*åÍô∞<ÒÛ‰Ü˘Rˆbx´˛PF0ae:ŒHewOë*b—€Ù≤æ≈f$,‡m…¬˛´¨oóåS@˚⁄zëﬁ3ída>7—ãáí⁄ñ•¯ùF££s§E¡˚•ÄZ+Vªaàå†ó}p;+P-N[yÒQç9û˜vÁÔC∏±™znÍ[¢ã.©•’5mjN”ÿŸILKWrCº›ﬁ1˘,iËÄi¸}Å, .+n-|; «´mMˇ gV“)))%ÓV±¿{>ïc{T5+"¶Ë“ÄëB«â'¶NôÅˆ‹!¯µ94ä#Uœü∞Z6∞^:•áPd±#â2:î‘Èç©ëœh® YÄü«Ç	%î0ô„ÕÂıî@„öÎ?(˜N∞ßÌ\è> ÓX©◊"Ä’r"q"\Á2UV”M_∑ô'V,ÆDué¥ÆíˆZÿê£só÷ótr∑‹A•K“
+u◊?∑∏bI,^±∂ú⁄˘Qº⁄6
+µV‘ç$ÍßIÙ˘"ﬁ∞ˇ˘Ï}%ø∫ˇ‹õ‚∫à¬ ^˝|G´]#xPÆ∏ï»hgõ˘Äj¬O5÷"Œ˙b‡H›∑¥Ìu≠@Ã∞G‚´ﬁtz.·±YÊ Xc"%◊¸e§0◊ﬁp6˛´±∑∞1—E.JUïµˇdï¶°tf„7!›î :À ~@Õì√Û´•’˝|IãûΩﬂπÌß£)~∂	®NYoª∂÷Ôç@Ñ∏’Ñ!±Q\có∞ÀhP+éÊíÂ…pööBÂx~HzbÚÅ—∆´≈√Ë}¥)‡2vÿ‡èøE.%ﬂG{ï#]÷ı?Ò∂ ÂÙÍôˇò–}Ñ©|∞w≤©ÛáÎÇ\≠ñJ-‚⁄£õNô¨¨,A˛í˝dÔÛ∫‹“ë G,æùÉ É…º“%cú}±h˝^Uõ◊µ‡W‡:Æ°@ÏId©z:Ñ‹¥yêíêåƒ*®Â÷øú›ùßç]ëEﬂW]›XßWMÚæƒ£°ó^ë_=Ñâ ^êlòúÊQˆC'8|∫,ûJòƒîAπ≥˘¯lÌ∏e\¶ŸKm-óª4ÇFÈ&ﬂÖiªÎ~äíÄ*t‡ˇõ∂Ø¯Îø? õÕ=˝ºı*ó4ökjˆÍ”∆,Gˇn)¬ÕáMUı›‘˚w¯≠…I˛å°®£YN¯î/Ö w¿jh¯í'àËÁﬂñ˛l’êt¸@‘ª(ó¿N÷I	˛⁄$Õ\iΩÓ•Vï´J≥ç-)"-`4ˇ≤gíôÒ∆÷≈∏ﬂ´y∆{Îo	h÷≈-±îCÑ"º¬ò}∫pîV9UF%≠€”wßnıËèu}!ÅfŒfZŒyœÌhúøú∑0u=5‹–œJ:Ü…|
+≠?˚tFÙÉ¿;ÇW%É◊Ë.ÕΩ¬Cf/ f‰ŒµÚf@m˝ŸiÌ¡™EWÍˆ9ﬁ5úÌçÍ*kt"c™UÚ.tµïæâ≥|ôµF‹Á@·n◊™såÔÚSMÏwne!s¯K-à€áƒ#‘Qú1˘¿èBK]*Nri62õåÔﬂ2=-L¶mcÄ∏¥u”¢”W5§ep>¥_a⁄Fk‚defXú‚i⁄ˆ.á–Qıé«$mô±µUG≠ñ€∫Ár—*:}Û∑T◊x
+ªÆÙ±ÏÜ~;«–⁄ÎºTå=€íı|‰j√iåF&~ÄDU≠~ö*\W4¶x‹T∏¡HπâFÂÕ EG1Ó”äSƒª„/NáÜuQöäf Á<MÉ>ÅÕ4µÊ¶ëÛµ÷´àO©‰'Óc#’p‰ ^&&•Œ#""*scù˜˜£±]“Ì•ƒñÊÁ!ÆMé.4$Sì±’˛Ìk'=	π°6∞%ˆJ|˛FßéÉö˛Z1ïPÚ˝Æ (enΩòÂà°Íô/q£¬Öπ¢â„5¥ëƒ/≈ÏFËYáan=◊ﬂhC%Ÿ)‚ß”ÖW™xLiE~k+¯√ÑöÏønÜÑVÄÍrV„»Ãª.		d.S–˛æ⁄} >’kB„ı+ù·4ãD®5ı˝ØêÆ îÃ]L‰é’2j… ˜¬ó;<ç„tt$Nñ™q Ä'uŒ/ÙaK∆c0˙.           8oKYKYK  pKYK»x    ..          8oKYKYK  pKYKæx    Âj e c t i  ¸o n   ˇˇˇˇˇˇ  ˇˇˇˇÂg r u n t  ¸. h t m l .   i n ÂRUNTH~1INJ ;oKYKYK  bàXK…x   Âg r u n t  º. s a s s     ˇˇˇˇÂRUNT~1 SAS ^oKYKYK  bàXK“x   Ât o p r e  f i x e r     ˇˇˇˇÂg r u n t  . s a s s .   a u ÂRUNTS~1AUT ÇoKYKYK  bàXK‹x   Âf y   ˇˇˇˇ ªˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂg u l p .  ªb r o w s e   r i ÂULP~1  BRO pKYKYK  bàXKÁx   ÂULP    PUGYpKYKYK  bàXKıx   Âs   ˇˇˇˇˇˇ #ˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂg u l p .  #r u b y . s   a s ÂULPRU~1SAS ÅpKYKYK  bàXKˇx   Âg u l p .  {s a s s   ˇˇ  ˇˇˇˇÂULP~1  SAS qKYKYK  càXKy   Âg u l p .  |s w i g   ˇˇ  ˇˇˇˇÂULP~1  SWI ,qKYKYK  càXKy   Âu e n c e  õ  ˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂg u l p .  õt a s k . s   e q ÂULPTA~1SEQ YqKYKYK  càXK"y   Ân   ˇˇˇˇˇˇ Ïˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂh t m l .  Ïi n j e c t   i o ÂTML~1  INJ ÉqKYKYK  càXK-y   Âs . i n j  \e c t i o n     ˇˇÂm i d d l  \e w a r e .   c s ÂIDDLE~1INJ £qKYKYK  càXK6y   Âc s s   ˇˇ ˚ˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂp r o x y  ˚. c u s t o   m - ÂROXY~1 CUS ≈qKYKYK  càXK?y   ÂERVER     rKYKYK  càXKGy   Âd . a s s  Êe t s   ˇˇˇˇ  ˇˇˇˇÂs e r v e  Êr . g z i p   p e ÂERVER~1ASS ;rKYKYK  càXKPy   Âe s   ˇˇˇˇ Vˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂs e r v e  Vr . i n c l   u d ÂERVER~1INC [rKYKYK  càXKYy   Âw a r e    ’ˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂs e r v e  ’r . m i d d   l e ÂERVER~1MID ¨rKYKYK  càXKcy   Âw e b p a  Wc k . b a b   e l ÂEBPAC~1BAB sKYKYK  càXKly   Ây - h o t  ≠- l o a d e   r   Âw e b p a  ≠c k . m o n   k e ÂEBPAC~1MON 5sKYKYK  càXKxy   Ât - h o t  f- l o a d e   r   Âw e b p a  fc k . p r e   a c ÂEBPAC~1PRE YsKYKYK  càXKÅy   Â- h o t -  \l o a d e r     ˇˇÂw e b p a  \c k . r e a   c t ÂEBPAC~1REA ªsKYKYK  càXK´y   Âr   ˇˇˇˇˇˇ ¸ˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂ- t r a n  ¸s f o r m -   h m Âw e b p a  ¸c k . r e a   c t ÂEBPAC~2REA (tKYKYK  càXKπy   Âc r i p t  ı  ˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇÂw e b p a  ıc k . t y p   e s ÂEBPAC~1TYP ÆtKYKYK  càXK«y   Âc r i p t  . r e a c t     ˇˇÂw e b p a  c k . t y p   e s ÂEBPAC~3REA uKYKYK  dàXK“y                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   .           ;oKYKYK  pKYK…x    ..          ;oKYKYK  pKYK»x    ÂESC    MD  ?oKYKYK  X≥ˇJ xz   ÂG r u n t  Ef i l e . j   s   ÂRUNTF~1JS   EoKYKYK  X≥ˇJÀx  Âp a c k a  ‘g e . j s o   n   ÂACKAG~1JSO  HoKYKYK  X≥ˇJÃxô  ÂEADME  MD  MoKYKYK  X≥ˇJÕx  ÂPP        PoKYKYK  bàXKŒx                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
