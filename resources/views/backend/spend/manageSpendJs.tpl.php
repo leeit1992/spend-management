@@ -29,10 +29,10 @@
     <tr class="uk-text-bold">
         <td class="uk-text-center uk-text-nowrap" colspan="3">
         </td>
-        <td class="uk-text-center uk-text-nowrap">
+        <td class="uk-text-center uk-text-danger uk-text-nowrap">
             Total price:
         </td>
-        <td class="uk-width-1-10 uk-text-center uk-text-nowrap"><?php echo $helpPrice->formatPrice( $totalPrice ); ?></td>
+        <td class="uk-text-center uk-text-danger uk-text-nowrap"><?php echo $helpPrice->formatPrice( $totalPrice ); ?></td>
         <td></td>
     </tr> 
 <?php else: ?>

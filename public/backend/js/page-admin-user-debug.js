@@ -163,6 +163,7 @@
             	$(".atl-list-user-js", self.el).html( dataResult.output );
             	$(".atl-list-user-not-js", self.el).hide();
             	altair_helpers.content_preloader_hide();
+            	$("ul.uk-pagination", self.el).hide();
             });
             return false;
 		},
@@ -249,6 +250,7 @@
             	var dataResult = JSON.parse( result );
             	$(".atl-list-user-js", self.el).html( dataResult.output );
             	altair_helpers.content_preloader_hide();
+            	$("ul.uk-pagination", self.el).hide();
             });
 		}
 	});

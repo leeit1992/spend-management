@@ -173,6 +173,7 @@
             	$(".atl-list-spend-js", self.el).html( dataResult.output );
             	$(".atl-list-spend-not-js", self.el).hide();
             	altair_helpers.content_preloader_hide();
+				$("ul.uk-pagination", self.el).hide();
             });
             return false;
 		},
@@ -196,6 +197,7 @@
             	$(".atl-list-spend-js", self.el).html( dataResult.output );
             	$(".atl-list-spend-not-js", self.el).hide();
             	altair_helpers.content_preloader_hide();
+            	$("ul.uk-pagination", self.el).hide();
             });
             return false;
 		},

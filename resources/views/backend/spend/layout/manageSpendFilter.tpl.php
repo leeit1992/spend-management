@@ -24,7 +24,7 @@
         <div class="uk-grid">
             <div class="uk-width-medium-1-3">
                 <select id="select_demo_1" data-md-selectize class="atl-spend-month">
-                    <option value="">Month ...</option>
+                    <option value="0">Month ...</option>
                     <?php
                     for ($i=1; $i <= 12; $i++) { 
                         echo '<option value="'. $i .'">'. $i .'</option>';
@@ -34,7 +34,7 @@
             </div>
             <div class="uk-width-medium-1-3">
                 <select id="select_demo_1" data-md-selectize class="atl-spend-year">
-                    <option value="">Year ...</option>
+                    <option value="0">Year ...</option>
                     <?php
                     for ( $i = 2020; $i >= 2010; $i--) { 
                         echo '<option value="'. $i .'">'. $i .'</option>';
