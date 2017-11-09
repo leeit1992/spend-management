@@ -119,29 +119,28 @@ class SpendController extends baseController
 		 * Check type get list spend manage.
 		 */
 		switch ( $request->get('getBy') ) {
-			case 'type':
-				ob_start();
-				$output .= View(
-					'backend/spend/manageSpendJs.tpl',
-					[
-						'spends'  => $this->mdSpend->getAllSpendBySeat( $request->get( 'typeStatus' ) ),
-						'mdSpend' => $this->mdSpend
-					]
-				);
-				$output .= ob_get_clean();
+			case 'day':
+				$spends = $this->mdSpend->getAllByDay( $request->get( 'startDate' ), $request->get( 'endDate' ) );
 				break;
-			case 'search':
-				ob_start();
-				$output .= View(
-					'backend/spend/manageSpendJs.tpl',
-					[
-						'spends'  => $this->mdSpend->searchBy( $request->get('keyup') ),
-						'mdSpend' => $this->mdSpend
-					]
-				);
-				$output .= ob_get_clean();
+			case 'month':
+				$spends = $this->mdSpend->getAllByMonth( $request->get( 'dataMonth' ), $request->get( 'dataYear' ) );
 				break;
 		}
+		$totalPrice = 0;
+		foreach ($spends as $value) {
+			$totalPrice += $value['spend_price'];
+		}
+		ob_start();
+		$output .= View(
+			'backend/spend/manageSpendJs.tpl',
+			[
+				'spends'     => $spends,
+				'totalPrice' => $totalPrice,
+				'mdSpend'    => $this->mdSpend,
+				'helpPrice'  => $this->helpPrice
+			]
+		);
+		$output .= ob_get_clean();
 		echo json_encode( [ 'output' => $output ] );
 	}
 	/**

@@ -61,7 +61,8 @@ class SpendModel extends Model
 			$this->table,
 			'*',
 			[
-				'LIMIT' => [$start, $limit]
+				'LIMIT' => [$start, $limit],
+				'ORDER' => [ 'id' => 'DESC']
 			]
 		);
 	}
@@ -95,12 +96,33 @@ class SpendModel extends Model
 	 * @param  string $key  Key search value.
 	 * @return void
 	 */
-	public function searchBy( $key ) {
+	public function getAllByDay( $startt = '0', $endd = '0' ) {
+		$start = date( 'Y-m-d', strtotime( $startt ) );
+		$end = date( 'Y-m-d', strtotime( $endd ) );
 		$listSpend =  $this->db->select(
 			$this->table,
 			'*',
 			[
-				"service_name[~]" => $key
+				"spend_date[<>]" => [ $start, $end ],
+				'ORDER' => [ 'id' => 'DESC']
+			]
+		);
+		return $listSpend;
+	}
+
+	/**
+	 * Handle search by key
+	 * 
+	 * @param  string $key  Key search value.
+	 * @return void
+	 */
+	public function getAllByMonth( $month = 1, $year = 2010 ) {
+		$string = $year.'-'.$month;
+		$listSpend =  $this->db->select(
+			$this->table,
+			'*',
+			[
+				"spend_date[~]" => $string
 			]
 		);
 		return $listSpend;

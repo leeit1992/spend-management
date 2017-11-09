@@ -14,10 +14,10 @@
 
 		events: {
 			'submit #atl-form-spend' : 'handleForm',
-			'click .atl-manage-spend-filter-js li' : 'handleFilterByType',
 			'click .atl-manage-spend-delete-js' : 'removeSpend',
 			'click .atl-action-apply-js' : 'actionManage',
-			'keyup .atl-spend-manage-search-js' : 'searchManage',
+			'click .atl-manage-spend-day-js' : 'searchManageDay',
+			'click .atl-manage-spend-month-js' : 'searchManageMonth',
 		},
 
 		errorFormTpl: _.template( '<div class="uk-notify-message <%= classes %>">\
@@ -97,32 +97,6 @@
 			} );
 		},
 		/**
-		 * handleFilterByType
-		 * Handle form by Type spend
-		 * @return void
-		 */
-		handleFilterByType: function(e){
-			var self = this;
-			altair_helpers.content_preloader_show();
-			$(".atl-manage-spend-filter-js li", this.el).each(function(index, el){
-				$(el).removeClass('uk-active');
-			});
-			$( e.currentTarget ).addClass('uk-active');
-			var data = {
-                getBy: "type",
-                typeStatus: $( 'a', e.currentTarget ).attr('data-type')
-          	};
-          	// Send to server handle.
-    		$.get(ATLDATA.adminUrl + '/ajax-manage-spend', data, function(result) {
-            	
-            	var dataResult = JSON.parse( result );
-            	$(".atl-list-spend-js", self.el).html( dataResult.output );
-            	$(".atl-list-spend-not-js", self.el).hide();
-            	altair_helpers.content_preloader_hide();
-            });
-            return false;
-		},
-		/**
 		 * Handle remove spend
 		 * 
 		 * @return void
@@ -179,32 +153,51 @@
 				UIkit.modal.alert('Please choose Action!');
 			}
 		},
-
+		/**
+		 * handleFilterByType
+		 * Handle form by Type spend
+		 * @return void
+		 */
+		searchManageDay: function(e){
+			var self = this;
+			altair_helpers.content_preloader_show();
+			var data = {
+                getBy: "day",
+                startDate: $('.atl-spend-start-day').val(),
+                endDate: $('.atl-spend-end-day').val()
+          	};
+          	// Send to server handle.
+    		$.get(ATLDATA.adminUrl + '/ajax-manage-spend', data, function(result) {
+            	
+            	var dataResult = JSON.parse( result );
+            	$(".atl-list-spend-js", self.el).html( dataResult.output );
+            	$(".atl-list-spend-not-js", self.el).hide();
+            	altair_helpers.content_preloader_hide();
+            });
+            return false;
+		},
 		/**
 		 * Handle search spend
 		 * 
 		 * @return void
 		 */
-		searchManage: function(e){
-			var keyup = $(e.currentTarget).val(),
-			 	data = {
-			 		getBy: "search",
-	    			keyup: keyup
-	            }; 
-            if( 0 < keyup.length ) {
-            	$(".atl-list-spend-not-js",this.el).fadeOut();
-	            $(".atl-list-spend-js",this.el).fadeIn();
-            	altair_helpers.content_preloader_show();
-            }else{
-            	$(".tl-list-spend-not-js",this.el).fadeIn();
-	            $(".tl-list-spend-js",this.el).fadeOut();
-            	altair_helpers.content_preloader_hide();
-            }
-            $.get(ATLDATA.adminUrl + '/ajax-manage-spend', data, function(result) {
+		searchManageMonth: function(e){
+			var self = this;
+			altair_helpers.content_preloader_show();
+			var data = {
+                getBy: "month",
+                dataMonth: $('.atl-spend-month').val(),
+                dataYear: $('.atl-spend-year').val()
+          	};
+          	// Send to server handle.
+    		$.get(ATLDATA.adminUrl + '/ajax-manage-spend', data, function(result) {
+            	
             	var dataResult = JSON.parse( result );
             	$(".atl-list-spend-js", self.el).html( dataResult.output );
+            	$(".atl-list-spend-not-js", self.el).hide();
             	altair_helpers.content_preloader_hide();
             });
+            return false;
 		},
 	});
 	new ATL_SPEND;

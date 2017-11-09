@@ -1,7 +1,7 @@
 <div class="user_heading" data-uk-sticky="{ top: 48, media: 960 }">
     <div class="user_heading_avatar fileinput fileinput-new" data-provides="fileinput">
         <div class="fileinput-new thumbnail">
-            <img src="<?php echo !empty( $meta['user_avatar'] ) ? url( $meta['user_avatar'] ) : assets( 'backend/assets/img/user.png' ); ?>" class="atl-user-avatar-js" alt="user avatar"/>
+            <img src="<?php echo !empty( $meta['user_avatar'] ) ? url($meta['user_avatar']) : assets('backend/assets/img/user.png') ?>" class="atl-user-avatar-js" alt="user avatar"/>
         </div>     
         <div class="user_avatar_controls">
             <span class="btn-file">
@@ -14,7 +14,7 @@
     </div>
     <div class="user_heading_content">
         <h2 class="heading_b">
-            <span class="uk-text-truncate"><?php echo $user['user_name']; ?></span>
+            <span class="uk-text-truncate"><?php echo $actionName; ?></span>
             <span class="sub-heading">
             <?php 
                 if( isset( $meta['user_role'] ) ) {

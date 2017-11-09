@@ -4,7 +4,7 @@ use Atl\Database\Model;
 use App\Model\AtlModel;
 class UserModel extends AtlModel
 {
-	public function __construct(){
+	public function __construct() {
 		parent::__construct('users');
 	}
 	/**
@@ -12,7 +12,7 @@ class UserModel extends AtlModel
 	 * 
 	 * @return string
 	 */
-	public function metaDataTable(){
+	public function metaDataTable() {
 		return 'usermeta';
 	}
 	/**
@@ -20,7 +20,7 @@ class UserModel extends AtlModel
 	 * 
 	 * @return stirng
 	 */
-	public function metaDataQueryBy(){
+	public function metaDataQueryBy() {
 		return 'user_id';
 	}
 	/**
@@ -30,13 +30,13 @@ class UserModel extends AtlModel
 	 * @param  [type] $pass  Account pass Account.
 	 * @return [type]        [description]
 	 */
-	public function checkLogin($acc, $pass){
+	public function checkLogin( $acc, $pass ) {
 		return $this->db->select(
 			$this->table, 
-				["id", "user_name", "user_email"], 
+				[ "id", "user_name", "user_email" ], 
 				[
 					"user_email"    => $acc,
-					"user_password" => $pass,
+					"user_password" => $pass
 				]
 			);
 	}
@@ -47,7 +47,7 @@ class UserModel extends AtlModel
 	 * @param  int    $id       User id
 	 * @return array
 	 */
-	public function save( $argsData, $id = null ){
+	public function save( $argsData, $id = null ) {
 		if( $id ){
 			$this->db->update(
 				$this->table, 
@@ -70,12 +70,12 @@ class UserModel extends AtlModel
 	 * @param  string $value Condition query
 	 * @return array
 	 */
-	public function getUserBy( $key, $value ){
+	public function getUserBy( $key, $value ) {
 		return $this->db->select(
 			$this->table, 
 				'*', 
 				[
-					$key => $value,
+					$key => $value
 				]
 			);
 	}
@@ -86,12 +86,12 @@ class UserModel extends AtlModel
 	 * @param  int 		$limit Number of row result.
 	 * @return array
 	 */
-	public function getUserLimit( $start, $limit ){
+	public function getUserLimit( $start, $limit ) {
 		$listUser = $this->db->select(
 			$this->table, 
 				'*', 
 				[
-					'LIMIT' => [$start, $limit],
+					'LIMIT' => [$start, $limit]
 				]
 			);
 		$argsUsers = [];
@@ -110,7 +110,7 @@ class UserModel extends AtlModel
 	 * @param  int 		$limit Number of row result.
 	 * @return array
 	 */
-	public function getUserList( ){
+	public function getUserList() {
 		return $this->db->select(
 			$this->table, 
 				'*'
@@ -120,8 +120,8 @@ class UserModel extends AtlModel
 	 * Handle count user
 	 * @return array
 	 */
-	public function count( $condition = [] ){
-		return $this->db->count($this->table, $condition);
+	public function count( $condition = [] ) {
+		return $this->db->count( $this->table, $condition );
 	}
 	/**
 	 * List role user.
@@ -200,7 +200,7 @@ class UserModel extends AtlModel
 			'*',
 			[
 				"user_email[~]" => $key,
-				"user_name[~]"  => $key,
+				"user_name[~]"  => $key
 			]
 		);
 		$argsUsers = [];

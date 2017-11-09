@@ -68,7 +68,24 @@ class AdminDataMenu
                     ]
                 ]
             ];
-
+        $menu['user'] = [
+                'label'   => 'Users',
+                'icon'    => '<i class="material-icons md-36">&#xE87C;</i>',
+                'conditionOpen' => ['Backend\UserController'],
+                'display' => '',
+                'submenu' => [
+                    [
+                        'label' => 'Users Management',
+                        'link'  => url('/atl-admin/manage-user'),
+                        'conditionOpen' => ['manageUsers'],
+                    ],
+                    [
+                        'label' => 'Add User',
+                        'link'  => url('/atl-admin/add-user'),
+                        'conditionOpen' => ['handleUser'],
+                    ]
+                ]
+            ];
         return $menu;
     }
 
