@@ -32,11 +32,10 @@ class ApiHandlePrice
      *
      * @return string
      */
-    public function formatPrice($price = 0, $currency = '$')
-    {
+    public function formatPrice( $price = 0, $currency = 'vnđ' ){
         global $apbSettings;
-        $currencyPos = 'left';
-        switch ($currencyPos) {
+        $currencyPos = 'right_space';
+        switch ( $currencyPos ) {
             case 'left':
                 $priceFormat = '%2$s%1$s';
             break;
@@ -51,20 +50,20 @@ class ApiHandlePrice
             break;
         }
         $args = array(
-            'currency' => $currency. ' ',
+            'currency'          => $currency,
             'thousandSeparator' => ',',
-            'decimalSeparator' => '.',
-            'decimals' => 2,
-            'priceFormat' => $priceFormat,
+            'decimalSeparator'  => '.',
+            'decimals'          => 0,
+            'priceFormat'       => $priceFormat,
         );
-        extract($args);
-        $price = number_format($price, $decimals, $decimalSeparator, $thousandSeparator);
-        return sprintf($priceFormat, $price, $currency);
+        extract( $args );
+        $price = number_format( $price, $decimals, $decimalSeparator, $thousandSeparator );
+        return sprintf( $priceFormat, $price, $currency );
     }
     
     public function convertPriceToInt( $price ) {
         $newInt = $price;
-        $newInt = str_replace( '$', '', $newInt );
+        $newInt = str_replace( 'vnđ', '', $newInt );
         $newInt = str_replace( ',', '', $newInt );
         $newInt = str_replace( '.00', '', $newInt );
         $newInt = trim( $newInt );

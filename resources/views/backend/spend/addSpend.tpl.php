@@ -41,7 +41,7 @@
                                                 'class' => 'md-input masked_input atl-required-js',
                                                 'value' => isset( $spend['spend_price'] ) ? $spend['spend_price'] : '',
                                                 'attr' => [
-                                                    'data-inputmask' => "'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 2, 'digitsOptional': false, 'prefix': '$ ', 'placeholder': '0'",
+                                                    'data-inputmask' => "'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': true, 'prefix': 'vnđ ', 'placeholder': '0'",
                                                     'data-inputmask-showmaskonhover' => 'false'
                                                 ]
                                             ] ); 
