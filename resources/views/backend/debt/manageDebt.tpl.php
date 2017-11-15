@@ -30,7 +30,9 @@
                     </tr>
                     </thead>
                     <tbody class="atl-list-debt-not-js">
-                        <?php foreach ( $listDebt as $value ): ?>
+                        <?php foreach ( $listDebt as $value ): 
+                            $debt_remain = intval( $value['debt_price'] ) - intval( $value['debt_paid'] );
+                        ?>
                         <tr class="atl-debt-item-<?php echo $value['id']; ?> uk-text-center">
                             <td class="uk-text-middle">
                                 <input type="checkbox" class="atl-checkbox-child-js" value="<?php echo $value['id']; ?>" />
@@ -45,12 +47,13 @@
                                 <?php echo $helpPrice->formatPrice( $value['debt_paid'] ); ?>
                             </td>
                             <td class="uk-text-middle">
-                                <?php 
-                                    $debt_remain = intval( $value['debt_price'] ) - intval( $value['debt_paid'] );
+                                <?php
                                     if ( $debt_remain > 0) {
                                         echo '<span class="uk-text-danger uk-text-bold">'. $helpPrice->formatPrice( $debt_remain ) .'</span>';
-                                    } else {
+                                    } elseif ( $debt_remain == 0) {
                                         echo '<span class="uk-text-success uk-text-bold">pay off the debt</span>';
+                                    } elseif ( $debt_remain < 0) {
+                                        echo '<span class="uk-text-success uk-text-bold">'. $helpPrice->formatPrice( $debt_remain ) .'</span>';
                                     }
                                     
                                 ?>
@@ -59,10 +62,11 @@
                                 <?php echo $helpPrice->formatPrice( $value['debt_price'] ); ?>
                             </td>
                             <td class="uk-text-middle">
-                                <a title="Pay" data-uk-tooltip="{pos:'top'}" data-uk-modal="{target:'#modal_header_footer'}">
-                                    <i class="md-icon material-icons">payment</i>
-                                </a>
-
+                                <?php if ( $debt_remain > 0 ): ?>
+                                    <a class="atl-debt-view-js" data-id="<?php echo $value['id']; ?>" title="Pay" data-uk-tooltip="{pos:'top'}" data-uk-modal="{target:'#modal_header_footer'}">
+                                        <i class="md-icon material-icons">payment</i>
+                                    </a>
+                                <?php endif ?>
                                 <a href="<?php echo url( '/atl-admin/edit-debt/' . $value['id'] ) ?>" title="Edit" data-uk-tooltip="{pos:'top'}">
                                     <i class="md-icon material-icons">edit</i>
                                 </a>
@@ -95,14 +99,16 @@
         <div class="uk-modal-dialog">
             <div class="uk-modal-header">
                 <h3 class="uk-modal-title">Pay the debt</h3>
+                <input type="hidden" name="atl-debt-id">
             </div>
-            <input class="md-input masked_input atl-required-js" type="text" name="atl_debt_price" value="" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': true, 'prefix': 'vnđ ', 'placeholder': '0'" data-inputmask-showmaskonhover="false">
+            <input class="md-input masked_input atl-required-js" type="text" name="atl-debt-pay" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': true, 'prefix': 'vnđ ', 'placeholder': '0'" data-inputmask-showmaskonhover="false">
             <div class="uk-modal-footer uk-text-right">
                 <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button>
-                <button type="button" class="md-btn md-btn-flat md-btn-flat-primary">Action</button>
+                <button type="button" class="md-btn md-btn-flat md-btn-flat-primary atl-debt-send-js">Save</button>
             </div>
         </div>
     </div>
+    <div class="uk-notify uk-notify-bottom-right atl-notify-js" style="display: none;" data-notify="<?php echo isset( $notify[0] ) ? $notify[0] : ''; ?>"></div>
 </div>
 
 <?php 

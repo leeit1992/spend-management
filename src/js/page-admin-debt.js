@@ -18,6 +18,8 @@
 			'click .atl-action-apply-js' : 'actionManage',
 			'click .atl-manage-debt-day-js' : 'searchManageDay',
 			'click .atl-manage-debt-month-js' : 'searchManageMonth',
+			'click .atl-debt-view-js' : 'handleView',
+			'click .atl-debt-send-js' : 'handleFormPay',
 		},
 
 		errorFormTpl: _.template( '<div class="uk-notify-message <%= classes %>">\
@@ -59,6 +61,7 @@
 			// Auto check all
 			ATLLIB.checkAll(this.el);
 		},
+
 		/**
 	     * Handle form data before save to database.
 	     * @return void
@@ -93,8 +96,7 @@
 		 * @return void
 		 */
 		handleDebt: function( event ){
-			var self     = this,
-				data = { formData :  $('#atl-form-debt', this.el).serialize() };
+			var data = { formData :  $('#atl-form-debt', this.el).serialize() };
 
 			altair_helpers.content_preloader_show();
 			// Send to server handle.
@@ -217,18 +219,46 @@
             return false;
 		},
 
-		changeDayExpire: function(e){
+		handleView: function( e ){
+			var dataID = $( e.currentTarget ).attr('data-id');
+			$("input[name=atl-debt-id]").val(dataID);
+			$("input[name=atl-debt-pay]").val('');
+		},
+
+		handleFormPay: function( e ){
 			var self = this;
-			var debtTime = $(".atl_debt_expire");
-			
-			if ( $('.atl_debt_expire_un').is(':checked') ) {
-				debtTime.attr('disabled', 'disabled');
-				debtTime.val('');
+			var	getValInput = $(".atl-required-js").val();
+
+			if( 0 === getValInput.length ){
+				$(".atl-required-js").addClass( self.formClassError );
+				return false;
 			} else {
-				debtTime.removeAttr("disabled");
+				this.handleDebtPay( event );
+				return false;
 			}
-		}
-		
+		},
+
+		handleDebtPay: function( event ){
+			var data = {
+				id : $("input[name=atl-debt-id]").val(),
+				pay: $("input[name=atl-debt-pay]").val()
+			};
+
+			altair_helpers.content_preloader_show();
+			// Send to server handle.
+            $.ajax( {
+			    url: ATLDATA.adminUrl + '/validate-debt-pay',
+			    type: "POST",
+			    data: data,
+			    success: function ( res ) {
+			    	altair_helpers.content_preloader_hide();	
+			    	var dataResult = JSON.parse( res );
+			    	if ( dataResult.status ) {
+			    		window.location = location.href = ATLDATA.adminUrl + '/manage-debt';
+			    	}
+			    }
+			} );
+		},
 	});
 	new ATL_DEBT;
 	

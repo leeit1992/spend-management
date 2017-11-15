@@ -24,5 +24,6 @@ class Debt implements RouterInterface
 		
 		$route->post( '/atl-admin/validate-debt', 'Backend\DebtController@validateDebt' );
 		$route->post( '/atl-admin/delete-debt', 'Backend\DebtController@ajaxDelete' );
+		$route->post( '/atl-admin/validate-debt-pay', 'Backend\DebtController@validateDebtPay' );
 	}
 }

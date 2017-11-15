@@ -30,7 +30,7 @@
         <td class="uk-text-center uk-text-nowrap" colspan="3">
         </td>
         <td class="uk-text-center uk-text-danger uk-text-nowrap">
-            Total price:
+            Total money:
         </td>
         <td class="uk-text-center uk-text-danger uk-text-nowrap"><?php echo $helpPrice->formatPrice( $totalPrice ); ?></td>
         <td></td>

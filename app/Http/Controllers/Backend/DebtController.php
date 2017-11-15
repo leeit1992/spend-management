@@ -5,6 +5,7 @@ use Atl\Foundation\Request;
 use Atl\Validation\Validation;
 use Atl\Pagination\Pagination;
 use App\Model\DebtModel;
+use App\Model\SpendModel;
 use App\Http\Components\ApiHandlePrice;
 use App\Http\Components\Controller as baseController;
 
@@ -16,6 +17,7 @@ class DebtController extends baseController
 
 		// Model data system.
 		$this->mdDebt   = new DebtModel;
+		$this->mdSpend  = new SpendModel;
 		$this->helpPrice = ApiHandlePrice::getInstance();
 	}
 
@@ -38,6 +40,7 @@ class DebtController extends baseController
 				'listDebt'    => $this->mdDebt->getDebtLimit( $pagination->getStartResult( $page ), $ofset ),
 				'pagination'   => $pagination->link(),
 				'mdDebt'      => $this->mdDebt,
+				'notify'       => Session()->getFlashBag()->get( 'debtFormNotice' ),
 				'helpPrice'    => $this->helpPrice,
                 'addButton'    => $this->addButton,
                 'manageAction' => $this->manageAction
@@ -128,8 +131,10 @@ class DebtController extends baseController
 				break;
 		}
 		$totalPrice = 0;
+		$totalPaid = 0;
 		foreach ($debts as $value) {
 			$totalPrice += $value['debt_price'];
+			$totalPaid += $value['debt_paid'];
 		}
 		ob_start();
 		$output .= View(
@@ -137,6 +142,7 @@ class DebtController extends baseController
 			[
 				'debts'     => $debts,
 				'totalPrice' => $totalPrice,
+				'totalRemain' => $totalPrice - $totalPaid,
 				'mdDebt'    => $this->mdDebt,
 				'helpPrice'  => $this->helpPrice
 			]
@@ -160,5 +166,44 @@ class DebtController extends baseController
 			$message['status'] = false;
 		}
 		echo json_encode( $message );
+	}
+
+	/**
+	 * Handle validate form debt.
+	 * 
+	 * @param  Request $request Request POST | GET method
+	 * @return void.
+	 */
+	public function validateDebtPay( Request $request ) {
+		$notice = [];
+		if ( !empty( $request->get( 'id' ) ) && !empty( $request->get( 'pay' ) ) ) {
+			$infoDebt = $this->mdDebt->getinfoDebt( $request->get( 'id' ) );
+			$debt_paid = intval( $infoDebt[0]['debt_paid'] ) + $this->helpPrice->convertPriceToInt ( $request->get( 'pay' ) );
+			// Update Debt.
+			$this->mdDebt->save( [
+					'debt_paid' => $debt_paid
+				],
+				$request->get( 'id' )
+			);
+			// get info Debt
+			$infoDebt = $this->mdDebt->getinfoDebt( $request->get( 'id' ) );
+			// Update Spend.
+			$dataSpend = [    
+				'spend_price' => $this->helpPrice->convertPriceToInt ( $request->get( 'pay' ) ),
+        		'spend_date'  => date('Y-m-d'),
+        		'spend_description' => $infoDebt[0]['debt_description'],
+        		'spend_created_date' => date("Y-m-d H:i:s")
+			];
+			$lastID = $this->mdSpend->save(
+				$dataSpend,
+				null
+			);
+			$notice['status'] = true;
+			// Set notice success
+			Session()->getFlashBag()->set( 'debtFormNotice', 'Update debt pay successfully' );	
+		} else {
+			$notice['status'] = false;
+		}
+		echo json_encode( $notice );
 	}
 }
