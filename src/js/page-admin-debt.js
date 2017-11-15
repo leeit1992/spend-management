@@ -41,6 +41,21 @@
 		    		},3000 )
 				}
 			});
+
+			$(".atl_debt_expire_un").on('ifChecked',function(){
+				
+				var debtTime = $(".atl_debt_expire");
+				
+				debtTime.attr('disabled', 'disabled');
+				debtTime.val('');
+			});
+
+			$(".atl_debt_expire_un").on('ifUnchecked',function(){
+	
+				var debtTime = $(".atl_debt_expire");
+				
+				debtTime.removeAttr("disabled");
+			});
 			// Auto check all
 			ATLLIB.checkAll(this.el);
 		},
@@ -201,6 +216,19 @@
             });
             return false;
 		},
+
+		changeDayExpire: function(e){
+			var self = this;
+			var debtTime = $(".atl_debt_expire");
+			
+			if ( $('.atl_debt_expire_un').is(':checked') ) {
+				debtTime.attr('disabled', 'disabled');
+				debtTime.val('');
+			} else {
+				debtTime.removeAttr("disabled");
+			}
+		}
+		
 	});
 	new ATL_DEBT;
 	

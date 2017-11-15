@@ -83,12 +83,12 @@ class DebtController extends baseController
 		if( !empty( $request->get( 'formData' ) ) ) {
 			parse_str( $request->get( 'formData' ), $formData );
 			$notice = [];
-
+			$debt_expire = (isset( $formData['atl_debt_expire_un'] )) ? $formData['atl_debt_expire_un'] : $formData['atl_debt_expire'];
 			// Insert | Update Debt.
 			$dataDebt = [    
 				'debt_price' => $this->helpPrice->convertPriceToInt ( $formData['atl_debt_price'] ),
         		'debt_date'  => $this->convertDateToYmd( $formData['atl_debt_date'] ),
-        		'debt_time'  => $this->convertTimeToHis( $formData['atl_debt_time'] ),
+        		'debt_expire'  => $debt_expire,
         		'debt_description' => $formData['atl_debt_description'],
         		'debt_created_date' => date("Y-m-d H:i:s")
 			];

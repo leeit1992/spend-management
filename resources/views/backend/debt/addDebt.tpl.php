@@ -33,7 +33,7 @@
                         <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                             <div class="uk-width-large-1-2">
                                 <div class="uk-form-row">
-                                    <label>Price</label>
+                                    <label>Money</label>
                                     <?php
                                         echo $self->renderInput( [
                                                 'type'  => 'text',
@@ -53,7 +53,7 @@
                                         <div class="uk-width-large-1-2 uk-width-medium-1-1">
                                             <div class="uk-input-group">
                                                 <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
-                                                <label>Date</label>
+                                                <label>Day</label>
                                                 <?php
                                                     echo $self->renderInput( [
                                                             'type'  => 'text',
@@ -66,22 +66,27 @@
                                                         ] ); 
                                                 ?>
                                             </div>
+                                            
                                         </div>
+                                        <?php 
+                                            $checked = '';
+                                            $disabled = '';
+                                            if ( isset( $debt['debt_expire'] ) &&  $debt['debt_expire'] === 'indefinitely' ) {
+                                                $checked = 'checked';
+                                                $disabled = 'disabled';
+                                            }
+                                        ?>
                                         <div class="uk-width-large-1-2 uk-width-medium-1-1">
                                             <div class="uk-input-group">
-                                                <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-clock-o"></i></span>
-                                                <label for="uk_tp_1">Time</label>
-                                                <?php
-                                                    echo $self->renderInput( [
-                                                            'type'  => 'text',
-                                                            'name'  => 'atl_debt_time', 
-                                                            'class' => 'md-input',
-                                                            'value' => isset( $debt['debt_time'] ) ? $debt['debt_time'] : '',
-                                                            'attr' => [
-                                                                'data-uk-timepicker' => ""
-                                                            ]
-                                                        ] ); 
-                                                ?>
+                                                <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                                                <label for="uk_tp_1">Expire day</label>
+                                                <input class="md-input atl_debt_expire" type="text" name="atl_debt_expire" value="<?php echo isset( $debt['debt_expire'] ) ? ( ( $debt['debt_expire'] === 'indefinitely' ) ? '' : $debt['debt_expire'] )  : ''; ?>" data-uk-datepicker="{format:'DD.MM.YYYY'}" <?php echo $disabled; ?>>
+                                            </div>
+                                            <div class="uk-input-group uk-margin-top uk-margin-left">
+                                                <p>
+                                                    <input type="checkbox" name="atl_debt_expire_un" class="atl_debt_expire_un" value="indefinitely" <?php echo $checked; ?> data-md-icheck/>
+                                                    <label class="inline-label">Indefinitely</label>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
