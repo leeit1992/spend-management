@@ -89,7 +89,8 @@ class SpendController extends baseController
 				'spend_price' => $this->helpPrice->convertPriceToInt ( $formData['atl_spend_price'] ),
         		'spend_date'  => $this->convertDateToYmd( $formData['atl_spend_date'] ),
         		'spend_time'  => $this->convertTimeToHis( $formData['atl_spend_time'] ),
-        		'spend_description' => $formData['atl_spend_description']
+        		'spend_description' => $formData['atl_spend_description'],
+        		'spend_created_date' => date("Y-m-d H:i:s")
 			];
 			$lastID = $this->mdSpend->save(
 				$dataSpend,

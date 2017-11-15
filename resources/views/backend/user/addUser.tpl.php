@@ -85,7 +85,7 @@
                         <?php
                             if( !empty( $user ) ) {
                                 echo $self->renderInput( [
-                                        'name' => 'atl_user_id', 
+                                        'name' => 'atl_spend_user_id', 
                                         'type' => 'hidden', 
                                         'value' => $user['id']
                                     ]

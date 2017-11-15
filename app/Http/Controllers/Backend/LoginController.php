@@ -13,7 +13,7 @@ class LoginController extends baseController
     }
 
     public function login() {
-        if ( true === Session()->has('atl_user_id' ) ) {
+        if ( true === Session()->has('atl_spend_user_id' ) ) {
             redirect( url('/atl-admin' ) );
             return true;
         }
@@ -40,10 +40,10 @@ class LoginController extends baseController
             $user = new UserModel();
             $checkUser = $user->checkLogin( $request->get( 'atl_login_acc' ), md5( $request->get( 'atl_login_pass' ) ) );
             if ( !empty( $checkUser ) ) {
-                Session()->set( 'atl_user_id', $checkUser[0]['id'] );
-                Session()->set( 'atl_user_name', $checkUser[0]['user_name'] );
-                Session()->set( 'atl_user_email', $checkUser[0]['user_email'] );
-                Session()->set( 'atl_user_meta',  $user->getAllMetaData( $checkUser[0]['id'] ) );
+                Session()->set( 'atl_spend_user_id', $checkUser[0]['id'] );
+                Session()->set( 'atl_spend_user_name', $checkUser[0]['user_name'] );
+                Session()->set( 'atl_spend_user_email', $checkUser[0]['user_email'] );
+                Session()->set( 'atl_spend_user_meta',  $user->getAllMetaData( $checkUser[0]['id'] ) );
 
                 redirect( url( '/atl-admin' ) );
             } else {
@@ -60,9 +60,9 @@ class LoginController extends baseController
     }
     
     public function logout() {
-        Session()->remove( 'atl_user_id' );
-        Session()->remove( 'atl_user_name' );
-        Session()->remove( 'atl_user_email' );
+        Session()->remove( 'atl_spend_user_id' );
+        Session()->remove( 'atl_spend_user_name' );
+        Session()->remove( 'atl_spend_user_email' );
 
         redirect( url( '/atl-login' ) );
     }

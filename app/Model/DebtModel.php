@@ -4,17 +4,17 @@ namespace App\Model;
 use Atl\Database\Model;
 use App\Model\AtlModel;
 
-class SpendModel extends Model
+class DebtModel extends Model
 {
 	public function __construct() {
-		parent::__construct( 'spend' );
+		parent::__construct( 'debt' );
 	}
 
 	/**
-	 * Insert | Update data spend.
+	 * Insert | Update data debt.
 	 * 
 	 * @param  array  $argsData Array data insert | update
-	 * @param  int    $id       Spend id
+	 * @param  int    $id       Debt id
 	 * @return array
 	 */
 	public function save( $argsData, $id = null ){
@@ -35,12 +35,12 @@ class SpendModel extends Model
 	}
 
 	/**
-	 * Handle query get info spend by key.
+	 * Handle query get info debt by key.
 	 * 
 	 * @param  stirng $key   Column key
 	 * @return array
 	 */
-	public function getinfoSpend( $id ) {
+	public function getinfoDebt( $id ) {
 		return $this->db->select(
 			$this->table,
 				'*',
@@ -51,12 +51,12 @@ class SpendModel extends Model
 	}
 
 	/**
-	 * Handle get limit spend
+	 * Handle get limit debt
 	 * @param  int 	  	$start Start query.
 	 * @param  int 		$limit Number of row result.
 	 * @return array
 	 */
-	public function getSpendLimit( $start, $limit ) {
+	public function getDebtLimit( $start, $limit ) {
 		return $this->db->select(
 			$this->table,
 			'*',
@@ -68,16 +68,16 @@ class SpendModel extends Model
 	}
 
 	/**
-	 * Handle count Spend
+	 * Handle count Debt
 	 * @return array
 	 */
 	public function count( $condition = [] ) {
 		return $this->db->count( $this->table, $condition );
 	}
 	/**
-	 * Handle remove spend
+	 * Handle remove debt
 	 * 
-	 * @param  int | array $args Data id spend
+	 * @param  int | array $args Data id debt
 	 * @return void
 	 */
 	public function delete( $args ) {
@@ -99,15 +99,15 @@ class SpendModel extends Model
 	public function getAllByDay( $startt = '0', $endd = '0' ) {
 		$start = date( 'Y-m-d', strtotime( $startt ) );
 		$end = date( 'Y-m-d', strtotime( $endd ) );
-		$listSpend =  $this->db->select(
+		$listDebt =  $this->db->select(
 			$this->table,
 			'*',
 			[
-				"spend_date[<>]" => [ $start, $end ],
-				'ORDER' => [ 'spend_date' => 'DESC']
+				"debt_date[<>]" => [ $start, $end ],
+				'ORDER' => [ 'debt_date' => 'DESC']
 			]
 		);
-		return $listSpend;
+		return $listDebt;
 	}
 
 	/**
@@ -118,14 +118,14 @@ class SpendModel extends Model
 	 */
 	public function getAllByMonth( $month = 1, $year = 2010 ) {
 		$string = $year.'-'.$month;
-		$listSpend =  $this->db->select(
+		$listDebt =  $this->db->select(
 			$this->table,
 			'*',
 			[
-				"spend_date[~]" => $string,
-				'ORDER' => [ 'spend_date' => 'DESC']
+				"debt_date[~]" => $string,
+				'ORDER' => [ 'debt_date' => 'DESC']
 			]
 		);
-		return $listSpend;
+		return $listDebt;
 	}
 }

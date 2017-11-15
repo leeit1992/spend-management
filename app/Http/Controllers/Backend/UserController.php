@@ -100,15 +100,15 @@ class UserController extends baseController
 			// Check validate user.
 			$validator->add(
 				[
-					'atl_user_email:Email'     => 'required | minlength(6)',
+					'atl_spend_user_email:Email'     => 'required | minlength(6)',
 					'atl_user_pass:Password'   => 'required | minlength(6)',
 					'atl_user_cf_pass:Confirm' => 'required | minlength(6) | match(item=atl_user_pass)',
 				]
 			);
 			if ( $validator->validate( $formData ) ) {
 				// Save user.
-				$emailExists = $this->mdUser->getUserBy( 'user_email', $formData['atl_user_email'] );
-				$emailExists = isset( $formData['atl_user_id'] ) ? array() : $emailExists;
+				$emailExists = $this->mdUser->getUserBy( 'user_email', $formData['atl_spend_user_email'] );
+				$emailExists = isset( $formData['atl_spend_user_id'] ) ? array() : $emailExists;
 
 				if( empty( $emailExists ) ) {
 					/**
@@ -116,14 +116,14 @@ class UserController extends baseController
 					 */
 					$lastID = $this->mdUser->save( 
 						[
-							'user_name'         => empty( $formData['atl_user_name'] ) ? $formData['atl_user_email'] : $formData['atl_user_name'],
+							'user_name'         => empty( $formData['atl_spend_user_name'] ) ? $formData['atl_spend_user_email'] : $formData['atl_spend_user_name'],
 							'user_password'     => $this->isValidMd5($formData['atl_user_pass']) ? $formData['atl_user_pass'] : md5( $formData['atl_user_pass'] ),
-							'user_email'        => $formData['atl_user_email'],
+							'user_email'        => $formData['atl_spend_user_email'],
 							'user_registered'   => date("Y-m-d H:i:s"),
 							'user_status'       => !empty( $formData['atl_user_status'] ) ? $formData['atl_user_status'] : 0,
-							'user_display_name' => empty( $formData['atl_user_name'] ) ? $formData['atl_user_email'] : $formData['atl_user_name'],
+							'user_display_name' => empty( $formData['atl_spend_user_name'] ) ? $formData['atl_spend_user_email'] : $formData['atl_spend_user_name'],
 						],
-						isset( $formData['atl_user_id'] ) ? $formData['atl_user_id'] : null
+						isset( $formData['atl_spend_user_id'] ) ? $formData['atl_spend_user_id'] : null
 					);
 					/**
 					 * Upload avatar
@@ -161,10 +161,10 @@ class UserController extends baseController
 					}
 
 					// Set notice success
-					$nameAction = isset( $formData['atl_user_id'] ) ? 'Update' : 'Create';
+					$nameAction = isset( $formData['atl_spend_user_id'] ) ? 'Update' : 'Create';
 					Session()->getFlashBag()->set( 'userFormNotice', $nameAction . ' account successfully' );
 
-					//$this->mdLogs->add( $this->mdLogs->logTemplate( $nameAction . ' User <b> ' . $formData['atl_user_email'] . ' </b>', 'User' ) );
+					//$this->mdLogs->add( $this->mdLogs->logTemplate( $nameAction . ' User <b> ' . $formData['atl_spend_user_email'] . ' </b>', 'User' ) );
 
 					// Set notice success
 					$notice['id']      = $lastID;

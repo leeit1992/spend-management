@@ -5,7 +5,7 @@
                 <label for="user_edit_uname_control">Email</label>
                 <?php
                     echo $self->renderInput( [
-                            'name'  => 'atl_user_email',
+                            'name'  => 'atl_spend_user_email',
                             'type'  => 'email',
                             'class' => 'md-input atl-required-js',
                             'value' => isset( $user['user_email'] ) ? $user['user_email'] : ''

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 08, 2017 lúc 11:37 AM
+-- Thời gian đã tạo: Th10 15, 2017 lúc 04:13 AM
 -- Phiên bản máy phục vụ: 10.1.25-MariaDB
 -- Phiên bản PHP: 5.6.31
 
@@ -25,6 +25,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `atl_collected`
+--
+
+CREATE TABLE `atl_collected` (
+  `id` int(11) NOT NULL,
+  `collected_price` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `collected_date` date DEFAULT NULL,
+  `collected_time` time DEFAULT NULL,
+  `collected_description` text COLLATE utf8_unicode_ci,
+  `collected_created_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `atl_debt`
+--
+
+CREATE TABLE `atl_debt` (
+  `id` int(11) NOT NULL,
+  `debt_price` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `debt_date` date DEFAULT NULL,
+  `debt_time` time DEFAULT NULL,
+  `debt_description` text COLLATE utf8_unicode_ci,
+  `debt_created_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `atl_spend`
 --
 
@@ -33,7 +63,8 @@ CREATE TABLE `atl_spend` (
   `spend_price` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `spend_date` date DEFAULT NULL,
   `spend_time` time DEFAULT NULL,
-  `spend_description` text COLLATE utf8_unicode_ci
+  `spend_description` text COLLATE utf8_unicode_ci,
+  `spend_created_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -77,6 +108,18 @@ INSERT INTO `atl_users` (`id`, `user_name`, `user_password`, `user_email`, `user
 --
 
 --
+-- Chỉ mục cho bảng `atl_collected`
+--
+ALTER TABLE `atl_collected`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `atl_debt`
+--
+ALTER TABLE `atl_debt`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `atl_spend`
 --
 ALTER TABLE `atl_spend`
@@ -99,10 +142,20 @@ ALTER TABLE `atl_users`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `atl_collected`
+--
+ALTER TABLE `atl_collected`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT cho bảng `atl_debt`
+--
+ALTER TABLE `atl_debt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT cho bảng `atl_spend`
 --
 ALTER TABLE `atl_spend`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT cho bảng `atl_usermeta`
 --

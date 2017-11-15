@@ -50,9 +50,9 @@ class AdminDataMenu
                 'link'  => url( '/atl-admin' ),
                 'display' => ''
             ];
-        $menu['Spend'] = [
+        $menu['spend'] = [
                 'label'   => 'Spends',
-                'icon'    => '<i class="material-icons md-36">&#xE87C;</i>',
+                'icon'    => '<i class="material-icons md-36">local_atm</i>',
                 'conditionOpen' => ['Backend\SpendController'],
                 'display' => '',
                 'submenu' => [
@@ -68,9 +68,45 @@ class AdminDataMenu
                     ]
                 ]
             ];
+        $menu['collected'] = [
+                'label'   => 'Money Collected',
+                'icon'    => '<i class="material-icons md-36">attach_money</i>',
+                'conditionOpen' => ['Backend\CollectedController'],
+                'display' => '',
+                'submenu' => [
+                    [
+                        'label' => 'Collected Management',
+                        'link'  => url('/atl-admin/manage-collected'),
+                        'conditionOpen' => ['manageCollecteds'],
+                    ],
+                    [
+                        'label' => 'Add Collected',
+                        'link'  => url('/atl-admin/add-collected'),
+                        'conditionOpen' => ['handleCollected'],
+                    ]
+                ]
+            ];
+        $menu['debt'] = [
+                'label'   => 'Amount of Debt',
+                'icon'    => '<i class="material-icons md-36">money_off</i>',
+                'conditionOpen' => ['Backend\DebtController'],
+                'display' => '',
+                'submenu' => [
+                    [
+                        'label' => 'Debt Management',
+                        'link'  => url('/atl-admin/manage-debt'),
+                        'conditionOpen' => ['manageDebts'],
+                    ],
+                    [
+                        'label' => 'Add Debt',
+                        'link'  => url('/atl-admin/add-debt'),
+                        'conditionOpen' => ['handleDebt'],
+                    ]
+                ]
+            ];
         $menu['user'] = [
                 'label'   => 'Users',
-                'icon'    => '<i class="material-icons md-36">&#xE87C;</i>',
+                'icon'    => '<i class="material-icons md-36">people</i>',
                 'conditionOpen' => ['Backend\UserController'],
                 'display' => '',
                 'submenu' => [

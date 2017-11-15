@@ -8,7 +8,7 @@
                 <label>User name</label>
                 <?php
                     echo $self->renderInput( [
-                            'name'  => 'atl_user_name',
+                            'name'  => 'atl_spend_user_name',
                             'type'  => 'text',
                             'class' => 'md-input',
                             'value' => isset( $user['user_name'] ) ? $user['user_name'] : ''

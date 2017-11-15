@@ -26,8 +26,8 @@ class Controller extends baseController
         $output = View(
             'backend/layout/header.tpl',
             [
-                'userId' => Session()->get('atl_user_id'),
-                'userInfo' => Session()->get('atl_user_meta'),
+                'userId' => Session()->get('atl_spend_user_id'),
+                'userInfo' => Session()->get('atl_spend_user_meta'),
                 'mdUser' => $mdUser,
                 'editor' => !empty($options['editor']) ? $options : false
             ]
@@ -54,7 +54,7 @@ class Controller extends baseController
      * Check curent access. login or not login.
      */
     public function userAccess() {
-        if ( true !== Session()->has( 'atl_user_id' ) ) {
+        if ( true !== Session()->has( 'atl_spend_user_id' ) ) {
             redirect( url( '/atl-login' ) );
         }
     }
