@@ -10,6 +10,9 @@
                 <?php echo $value['debt_date']; ?>
             </td>
             <td class="uk-text-middle">
+                <?php echo $value['debt_expire']; ?>
+            </td>
+            <td class="uk-text-middle">
                 <?php echo $value['debt_description']; ?>
             </td>
             <td class="uk-text-middle">
@@ -46,7 +49,7 @@
         </tr>
     <?php endforeach; ?>
     <tr class="uk-text-bold">
-        <td class="uk-text-center uk-text-nowrap" colspan="3">
+        <td class="uk-text-center uk-text-nowrap" colspan="4">
         </td>
         <td class="uk-text-center uk-text-nowrap">
             TOTAL MONEY:

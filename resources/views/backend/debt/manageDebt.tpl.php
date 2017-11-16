@@ -21,12 +21,13 @@
                         <th class="uk-text-center uk-text-nowrap">
                             <input type="checkbox" class="atl-checkbox-primary-js" />
                         </th>
-                        <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Date</th>
+                        <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Date debt</th>
+                        <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Date expire</th>
                         <th class="uk-width-4-10 uk-text-center uk-text-nowrap">Description</th>
                         <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Amount paid</th>
                         <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Money remain</th>
-                        <th class="uk-width-2-10 uk-text-center uk-text-nowrap">Total money debt</th>
-                        <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Actions</th>
+                        <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Total money debt</th>
+                        <th class="uk-text-center uk-text-nowrap">Actions</th>
                     </tr>
                     </thead>
                     <tbody class="atl-list-debt-not-js">
@@ -38,7 +39,10 @@
                                 <input type="checkbox" class="atl-checkbox-child-js" value="<?php echo $value['id']; ?>" />
                             </td>
                             <td class="uk-text-middle">
-                                <?php echo $value['debt_date']; ?>
+                                <?php echo date('d.m.Y', strtotime($value['debt_date'])); ?>
+                            </td>
+                            <td class="uk-text-middle">
+                                <?php echo $value['debt_expire']; ?>
                             </td>
                             <td class="uk-text-middle">
                                 <?php echo $value['debt_description']; ?>
