@@ -27,7 +27,7 @@
                         <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Amount paid</th>
                         <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Money remain</th>
                         <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Total money debt</th>
-                        <th class="uk-text-center uk-text-nowrap">Actions</th>
+                        <th class="uk-width-1-10 uk-text-center uk-text-nowrap">Actions</th>
                     </tr>
                     </thead>
                     <tbody class="atl-list-debt-not-js">

@@ -11,7 +11,6 @@
 
 $route->get( '/atl-admin', 'Backend\MainController@index' );
 $route->get( '/atl-admin/error-404', 'Backend\MainController@page404' );
-$route->get( '/atl-admin/template', 'Backend\MainController@template' );
 
 /*=====  End of Main  ======*/
 
