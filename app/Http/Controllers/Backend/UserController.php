@@ -95,14 +95,14 @@ class UserController extends baseController
 		if( !empty( $request->get('formData') ) ) {
 			parse_str($request->get('formData'), $formData);
 
-			$notice    = array();
+			$notice    = [];
 			$validator = new Validation;
 			// Check validate user.
 			$validator->add(
 				[
 					'atl_spend_user_email:Email'     => 'required | minlength(6)',
 					'atl_user_pass:Password'   => 'required | minlength(6)',
-					'atl_user_cf_pass:Confirm' => 'required | minlength(6) | match(item=atl_user_pass)',
+					'atl_user_cf_pass:Confirm' => 'required | minlength(6) | match(item=atl_user_pass)'
 				]
 			);
 			if ( $validator->validate( $formData ) ) {
@@ -121,7 +121,7 @@ class UserController extends baseController
 							'user_email'        => $formData['atl_spend_user_email'],
 							'user_registered'   => date("Y-m-d H:i:s"),
 							'user_status'       => !empty( $formData['atl_user_status'] ) ? $formData['atl_user_status'] : 0,
-							'user_display_name' => empty( $formData['atl_spend_user_name'] ) ? $formData['atl_spend_user_email'] : $formData['atl_spend_user_name'],
+							'user_display_name' => empty( $formData['atl_spend_user_name'] ) ? $formData['atl_spend_user_email'] : $formData['atl_spend_user_name']
 						],
 						isset( $formData['atl_spend_user_id'] ) ? $formData['atl_spend_user_id'] : null
 					);
@@ -152,7 +152,7 @@ class UserController extends baseController
 						'user_social'   => $formData['atl_user_social'],
 						'user_role'     => $formData['atl_user_role'],
 						'user_office'   => $formData['atl_user_office'],
-						'user_avatar'   => $linkAvatar,
+						'user_avatar'   => $linkAvatar
 
 					];
 					// Loop add add | update meta data.
@@ -202,7 +202,7 @@ class UserController extends baseController
 					'backend/user/manageUserJs.tpl',
 					[
 						'users'  => $this->mdUser->getAllUserByMeta( 'user_role', $request->get('roleStatus') ),
-						'mdUser' => $this->mdUser,
+						'mdUser' => $this->mdUser
 					]
 				);
 				$output .= ob_get_clean();
@@ -213,17 +213,15 @@ class UserController extends baseController
 					'backend/user/manageUserJs.tpl',
 					[
 						'users'  => $this->mdUser->searchBy( $request->get('keyup') ),
-						'mdUser' => $this->mdUser,
+						'mdUser' => $this->mdUser
 					]
 				);
 				$output .= ob_get_clean();
 				break;
 		}
-		echo json_encode( 
-			[
+		echo json_encode( [
 				'output' => $output
-			]
-		);
+		] );
 	}
 
 	/**
@@ -232,7 +230,7 @@ class UserController extends baseController
 	 * @param  Request $request POST | GET
 	 * @return void
 	 */
-	public function ajaxDelete(Request $request){
+	public function ajaxDelete( Request $request ) {
 		$id = $request->get('id');
 		// Remove user
 		$output = $this->mdUser->delete( $id );

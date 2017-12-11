@@ -28,16 +28,4 @@ class MainController extends baseController
 			]
 		);
 	}
-
-	/**
-	 * Handle set page 404
-	 */
-	public function template( Request $request ){
-		return View(
-			'backend/template.tpl',
-			[	
-			
-			]
-		);
-	}
 }

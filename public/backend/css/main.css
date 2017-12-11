@@ -1,0 +1,108 @@
+#wrapper-page {
+  margin: 40px 0px 60px 0px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff; }
+  #wrapper-page .container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; }
+    #wrapper-page .container .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px; }
+    #wrapper-page .container .atl-tittle {
+      font-size: 23px; }
+    #wrapper-page .container .atl-card-number {
+      margin: 0px 40px;
+      padding: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: .25rem; }
+    #wrapper-page .container .col, #wrapper-page .container .col-2, #wrapper-page .container .col-3, #wrapper-page .container .col-4, #wrapper-page .container .col-5, #wrapper-page .container .col-6, #wrapper-page .container .col-7, #wrapper-page .container .col-8, #wrapper-page .container .col-12 {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px; }
+    #wrapper-page .container .col-2 {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%; }
+    #wrapper-page .container .col-3 {
+      flex: 0 0 25%;
+      max-width: 25%; }
+    #wrapper-page .container .col-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%; }
+    #wrapper-page .container .col-5 {
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%; }
+    #wrapper-page .container .col-6 {
+      flex: 0 0 50%;
+      max-width: 50%; }
+    #wrapper-page .container .offset-6 {
+      margin-left: 50%; }
+    #wrapper-page .container .col-7 {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%; }
+    #wrapper-page .container .col-8 {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%; }
+    #wrapper-page .container .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #wrapper-page .container table {
+      border-collapse: collapse; }
+      #wrapper-page .container table .atl-account {
+        width: 30%; }
+      #wrapper-page .container table .atl-bank-charges {
+        width: 50%;
+        font-size: 13px; }
+    #wrapper-page .container .table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent; }
+      #wrapper-page .container .table td, #wrapper-page .container .table th {
+        border: 1px solid #bec5cc; }
+      #wrapper-page .container .table .atl-rm-border-top {
+        border-top: 0px solid; }
+      #wrapper-page .container .table .atl-rm-border-bottom {
+        border-bottom: 0px solid; }
+      #wrapper-page .container .table .atl-rm-border-right {
+        border-right: 0px solid; }
+      #wrapper-page .container .table .atl-rm-border-left {
+        border-left: 0px solid; }
+      #wrapper-page .container .table .atl-rm-border {
+        border: 0px solid; }
+      #wrapper-page .container .table .atl-card-fee {
+        margin: 0px 30px;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.125); }
+    #wrapper-page .container .table-sm td, #wrapper-page .container .table-sm th {
+      padding: .3rem; }
+  #wrapper-page img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%; }
+  #wrapper-page hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible; }
+  #wrapper-page .text-center {
+    text-align: center !important; }
+  #wrapper-page .text-right {
+    text-align: right !important; }
+  #wrapper-page * {
+    box-sizing: border-box; }

@@ -40,7 +40,7 @@
            
             <div class="md-card-content large-padding" id="login_form">
                 <div class="login_heading">
-                    <div class="user_avatar"></div>
+                    <div class="user_avatar"><img src="<?php echo url('/public/backend/assets/img/logo-login.png') ?>"></div>
                 </div>
                 <form method="POST" action="<?php echo url( '/check-login' ); ?>">
                     <div class="uk-form-row">

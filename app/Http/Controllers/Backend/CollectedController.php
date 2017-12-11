@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Backend;
 
 use Atl\Foundation\Request;
-use Atl\Validation\Validation;
 use Atl\Pagination\Pagination;
 use App\Model\CollectedModel;
 use App\Http\Components\ApiHandlePrice;
